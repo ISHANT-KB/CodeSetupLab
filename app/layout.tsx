@@ -10,7 +10,10 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 export const metadata: Metadata = {
   title: "CodeSetupLab — Best Coding Setups & Budget Tech for Students",
@@ -25,6 +28,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
+      <head>
+        <meta
+          name="p:domain_verify"
+          content="9b5721054e5260feb1a78cac5b4ed02c"
+        />
+      </head>
       <body className="bg-gray-50 text-gray-900 antialiased font-sans">
         <Navbar />
         <main>{children}</main>
