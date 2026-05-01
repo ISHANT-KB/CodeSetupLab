@@ -24,13 +24,16 @@ export default function ProductCard({
   image,
   link,
 }: ProductCardProps) {
+  const isPlaceholderImage = image.includes("placehold.co");
+
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-100">
-      <div className="relative aspect-3/2 overflow-hidden bg-gray-100">
+      <div className="relative aspect-[3/2] overflow-hidden bg-gray-100">
         <Image
           src={image}
           alt={name}
           fill
+          unoptimized={isPlaceholderImage}
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />

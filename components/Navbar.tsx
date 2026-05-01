@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Best Laptops", href: "/best-laptops" },
+  { label: "Blog", href: "/blogs" },
   // ADD NEW PAGE LINKS HERE ↓
   // { label: "Accessories", href: "/accessories" },
 ];
